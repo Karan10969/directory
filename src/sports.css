@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+
+.sports-container{
+    height: 100%;
+    display: flex;
+}
+
+.image{
+    background-image: url("./images/sportsbanner.png");
+    background-size: cover;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.sports-description{
+    width: 30%;
+    position: relative;
+}
+
+.sports-review{
+    width: 30%;
+}
+
+.sports-description span{
+    background-color: bisque;
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    height: 9%;
+    width: 40%;
+    font-size: 0.8em;
+    border-radius: 5px;
+    padding-top:2px;
+    padding-left: 10px;
+}
+
+.menu{
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.left{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: moveleft;
+    animation-duration: 3s;
+}
+
+.right{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: moveright;
+    animation-duration: 3s;
+}
+
+.center{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    animation-name: movecenter;
+    animation-duration: 3s;
+}
+
+.bottom{
+    cursor: pointer;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: movebottom;
+    animation-duration: 3s;
+}
+.bottom:hover{
+    background-color: black;
+    color: bisque;
+    height: 10%;
+}
+
+.sportsDetails{
+    background-color: transparent;
+    height: 50%;
+    width: 85%;
+    margin: 20% auto;
+    border-radius: 20px;
+    padding: 15px;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    color: bisque;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.sportsDetails span{
+    animation-name: growText;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.sports-review{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+}
+
+.sports-review button{
+    height: 1.4em;
+}
+
+.sports-review textarea{
+    height: 40%;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #dcbda9;
+}
+
+.sports-review label{
+    margin-left: -20px;
+}
+
+@keyframes moveright{
+    from{
+        top: 0%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@keyframes moveleft{
+    from{
+        top: 0%;
+        right: 50%;
+    }
+}
+
+@keyframes movebottom{
+    from{
+        top: 0%;
+        transform: translateX(50%);
+    }
+}
+
+@keyframes movecenter{
+    from{
+        top: 0%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes grow{
+    from{
+        height: 0%;
+        width: 0%;
+    }
+}
+
+@keyframes growText {
+    from{
+        font-size: 0%;
+    }
+}

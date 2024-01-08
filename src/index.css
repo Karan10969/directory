@@ -1,13 +1,220 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-image: url("./images/website-background.jpg");
+  background-size: cover;
+}
+
+/*
+!! header component CSS
+*/
+
+.main--container{
+  position: relative;
+}
+
+.header-container{
+  position: relative;
+  background-color: rgba(228, 171, 171, 0.765);
+  height: 20vh;
+  width: 99vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+  border-radius: 10px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.header-text{
+  color: white;
+  position: relative;
+  top: -30%;
+  right: 20%;
+  animation-name: headertext;
+  animation-duration: 3s;
+}
+
+.header-logo{
+  position: relative;
+  height: 100%;
+  margin-bottom: -1%;
+  left: 35%;
+  transform: translateX(-50%);
+  animation-name: headerlogo;
+  animation-duration: 3s;
+}
+
+.header-container:hover{
+  background-color: rgb(23, 21, 21);
+  color: rgb(228, 171, 171);
+  animation: night 1s linear;
+}
+
+.header-container:hover .header-logo{
+  animation: grow 1s linear;
+}
+
+@keyframes headerlogo{
+  from{
+    left: 0%;
+  }
+}
+
+@keyframes headertext{
+    from{
+      transform: scale(0);
+    }
+    to{
+      transform: scale(1);
+    }
+}
+
+@keyframes grow{
+  from{
+    height: 0%;
+  }
+}
+
+@keyframes night{
+  0%{
+    background-color: rgba(228, 171, 171, 0.765)
+  }
+  50%{
+    background-color: grey;
+  }
+  100%{
+    background-color: rgb(23, 21, 21);
+  }
+}
+
+
+/*
+!! Main component CSS
+*/
+
+.main-container{
+  height: 60vh;
+  width: 99vw;
+  display: flex;
+  backdrop-filter: blur(2px);
+}
+
+.main-directory{
+  height: 100%;
+  width: 70%;
+}
+
+.main-sort-section{
+  height: 100%;
+  width: 30%;
+}
+
+/*
+!! Main Component Elements CSS
+*/
+
+.business-selector{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.business-selector img{
+  height: 60%;
+  margin-top: 30%;
+  border-radius: 10px;
+}
+
+.business-selector img:hover{
+  animation-name: fadeEffect;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+/*
+!! Business section Elements CSS
+*/
+.business-section{
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid rgb(227, 151, 151);
+  border-radius: 10px;
+}
+.business-section:hover{
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+/* Animations */
+
+@keyframes glow{
+  from{
+      box-shadow: 5px 5px 5px rgb(212, 146, 146);
+  }
+  to{
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.219);
+  }
+}
+
+@keyframes fadeEffect {
+
+  from {
+    background-color: rgb(228, 171, 171);
+  }
+  to {
+    background-color: #BF3131;
+
+  }
+
+}
+
+.main-sort-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 40%;
+  width: 30%;
+}
+
+.main-sort-section span{
+  height: 25%;
+  width: 80%;
+  border: 2px solid #BF3131;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  animation: sortMove 1s ease-in-out;
+}
+
+.main-sort-section h3{
+  font-family: 'Inconsolata', monospace;
+}
+
+@keyframes sortMove {
+    from{
+      transform: translateY(200%);
+    }
+}
+
+.main-sort-section span img{
+  height: 100%;
+  width: 10%;
 }

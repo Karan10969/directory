@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+}
+
+.usedcars::-webkit-scrollbar{
+    display: none;
+}
+
+.automotive-main{
+    height: 100%;
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.autoshop{
+    width: 30%;
+    height:100%;
+}
+
+.loan-calculator{
+    width: 40%;
+    height:100%;
+}
+
+.automative-review{
+    width: 30%;
+    height:100%;
+    border: 1px solid red;
+}
+
+.autoshop--top{
+    display: flex;
+    height: 20%;
+}
+
+
+.auto-image{
+    background-image: url('./images/garage.png');
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+}
+
+.usedcars{
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.used-car-map{
+    height: 100%;
+}
+
+.usedcars-image{
+    margin: 0 auto;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 10%;
+   
+}
+
+.usedcars-image:hover{
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 5px rgb(69, 68, 68);
+    animation-name: carshadow;
+    animation-duration: 2s;
+}
+.usedcars-image img{
+    height: 60%;
+}
+
+.usedcars-image img:hover{
+    animation-name: grow;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+.info-row-1{
+    margin: 10px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.info-row-2{
+    margin-left: 10px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.gap{
+    margin-left: 15%;
+}
+
+.loan-calculator form{
+    padding-top:5%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loan-calculator form input, select, button{
+    width: 50%;
+}
+
+.contact-details{
+    margin-left: 5%;
+    margin-top: 2%;
+    height: 13%;
+    width: 90%;
+    background-color:beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.contact-details:hover{
+    cursor: pointer;
+    color: beige;
+    background-color: rgb(22, 22, 22);
+}
+
+.phoneNumber{
+    display: none;
+}
+
+.contact-details:hover .phoneNumber{
+    display: block;
+}
+
+.automative-review{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: 'Oswald', sans-serif;
+    color: #E36414;
+}
+
+.restautomativeaunt-review button{
+    height: 1.4em;
+}
+
+.automative-review textarea{
+    height: 40%;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #dcbda9;
+}
+
+.automative-review label{
+    margin-left: -20px;
+}
+
+
+@keyframes carshadow {
+    from{
+        backdrop-filter: blur(0px);
+        border-radius: 0%;
+        box-shadow: 0px 0px 0px rgb(255, 253, 253);
+    }
+}
+@keyframes grow{
+    from{
+       height: 70%;
+    }
+}

@@ -1,0 +1,35 @@
+.more{
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+
+.more span{
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.more .loader{
+    height: 100px;
+    width: 100px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+   animation: loader 2s linear infinite;
+}
+
+@keyframes loader{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
